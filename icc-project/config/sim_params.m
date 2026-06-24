@@ -49,7 +49,10 @@ CTRL.LAT.Kp     = 1.0;     % 비례 게인
 CTRL.LAT.Ki     = 0.1;     % 적분 게인
 CTRL.LAT.Kd     = 0.05;    % 미분 게인
 CTRL.LAT.intMax = 5.0;     % 적분 안티와인드업 한계 [rad]
-
+CTRL.LAT.afsAuthority  = deg2rad(30);   % AFS 권한 한계 (크게 = 안정성 우선)
+CTRL.LAT.Ki_lqr        = 2.0;           % yaw rate 적분 게인
+CTRL.LAT.betaThreshold = deg2rad(3);    % ESC 개입 슬립각 임계
+CTRL.LAT.betaGain      = 6e4;           % ESC yaw moment 게인
 %% 제어기 파라미터 — 종방향 (Longitudinal)
 CTRL.LON.Kp     = 0.5;     % 비례 게인
 CTRL.LON.Ki     = 0.05;    % 적분 게인
